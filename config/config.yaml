@@ -1,0 +1,73 @@
+# PineDocs config file.
+#
+# See a detailed list of all settings here:
+# https://github.com/xy2z/PineDocs/tree/master#configuration
+
+# [string] The title.
+title: VTE Wiki
+
+# [string] The full path of the content directory to show.
+#content_dir: /data/pinedocs/content
+
+# [string] Filename of the index file inside content_dir.
+index: index.md
+
+# [string] Layout to use.
+# A layout is basically anything but the colors.
+# See a list of layouts in public/layouts/
+layout: wiki
+
+# [string] The color-scheme to use.
+# See available color schemes in public/color-schems/
+color_scheme: simplistic-dark
+
+# [string] Code highlighting themes: default, monokai, tomorrow, sunburst, darcula.
+# See available themes on https://highlightjs.org/static/demo/
+highlight_theme: monokai
+
+# [bool] Use transparent bacground on code blocks?
+# True: The background will be transparent.
+# False: The background from the highlight_theme will be used.
+code_transparent_bg: False
+
+# [int|string] How many dirs to open on pageload.
+# Use 'all' to open all dirs, or use a number to specify the levels of dir to open.
+open_dirs: 0
+
+# [bool] Render the menu footer.
+render_footer: true
+
+# [array] Exclude files or dirs. To use regex start and end with '/', like this: /regex/
+exclude_files:
+  - .git
+  - .db
+  - .swp
+
+# [bool] Show file extensions.
+show_file_extension: true
+
+# [string] How to render links and dirs.
+# Values: default, ucfirst, ucwords, uppercase, lowercase.
+menu_link_format: default
+
+# [float] Max file size (in MB) to render. If file is larger, a download link will be shown.
+render_max_file_size: 50
+
+# [string] Overwrite the font
+# font_family: 'Arial'
+
+# [string] Overwrite the font size
+# font_size: '15px'
+
+# [bool] Render files with no extension as markdown, eg. `README`
+# no_extension_markdown: true
+
+# [bool] Break code blocks in multiple lines instead of horizontally scrolling
+# break_code_blocks: false
+
+# [array] A list of folders to hide from frontend navigation. Case-insensitive.
+# hide_folders_in_navigation:
+#  - hide-this
+
+# [bool] Enable MathJax if true.
+# enable_mathjax: false

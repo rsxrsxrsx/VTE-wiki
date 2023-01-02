@@ -1,0 +1,22 @@
+{
+    "name": "xy2z/pinedocs",
+    "description": "A simple, fast, customizable and lightweight site for browsing files.",
+    "type": "project",
+    "license": "GPLv3",
+    "config": {
+        "vendor-dir": "src/vendor"
+    },
+    "authors": [
+        {
+            "name": "xy2z",
+            "email": "xy2z@pm.me"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0",
+        "symfony/yaml": "^5.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.4"
+    }
+}
