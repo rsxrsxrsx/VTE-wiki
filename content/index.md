@@ -5,5 +5,4 @@ Administrative contact: `bofh [AT] syspro [DOT] gs`
 
 Heavy work in progress. Please pardon our dust.
 
-![](337.gif)
-
+![](2169.gif)
