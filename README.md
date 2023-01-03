@@ -5,7 +5,7 @@ Markdown goes in `content/`, images and other static content in `public/`. Feel 
 
 ```
 > vendor
-		> platform
-				> OS
-						> topic
+  > platform
+    > OS
+      > topic
 ```
