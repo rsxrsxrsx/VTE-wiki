@@ -346,8 +346,7 @@ Once it completes, you'll be asked if you want to configure TCPIP. For the sake 
 >;
 >* Log directory [S R:0-20 D:"LB:[IPLOG]"]:
 >* Enable telnet server? [Y/N D:Y]:
->* Telnet welcome message [S R:0.-80. D:"Welcome to WOOYOO, an RSX-11M-PLUS syst
-em!"]:
+>* Telnet welcome message [S R:0.-80. D:"Welcome to WOOYOO, an RSX-11M-PLUS system!"]:
 >* Telnet terminals [D R:0.-32. D:8.]:
 >* Start RWHOD? [Y/N D:N]: 
 >* Start SPOOF? [Y/N D:Y]: N
