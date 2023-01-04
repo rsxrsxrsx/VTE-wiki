@@ -24,7 +24,9 @@ acd link ti: to number cle$emacs
 You should now be able to navigate MCR/DCL sessions using arrow keys and other such niceties. Check out `help acd` for more information.
 
 ## Increasing secondary pool space
-On busier systems with plenty of memory (my 11/83 has a full 4MB of PMI RAM), you may wish to allocate additional secondary pool space. The reasoning behind doing so is outside the scope of this document; you are highly encouraged to read "Chapter 8: Memory Management" in the [RSX-11M-PLUS and Micro/RSX System Management Guide (pp.304)](http://bitsavers.org/pdf/dec/pdp11/rsx11m_plus/RSX11Mplus_V4.x/7/AA-JS14A-TC_RSX-11M_PLUS_V4.0_RSX-11M-PLUS_and_MicroRSX_System_Management_Guide_Sep87.pdf) manual. Expanding the secondary pool temporarily can be done in a few different ways, but doing so permanently requires a sysgen and VMR. First, temporarily; `LOAD /EXP=SEC /SIZE=n` can be used to increase the size of a given pool (in this example, the secondary pool as specified by `/EXP=SEC`) by `n` words:
+On busier systems with plenty of memory (my 11/83 has a full 4MB of PMI RAM), you may wish to allocate additional secondary pool space. The reasoning behind doing so is outside the scope of this document; you are highly encouraged to read "Chapter 8: Memory Management" in the [RSX-11M-PLUS and Micro/RSX System Management Guide (pp.304)](http://bitsavers.org/pdf/dec/pdp11/rsx11m_plus/RSX11Mplus_V4.x/7/AA-JS14A-TC_RSX-11M_PLUS_V4.0_RSX-11M-PLUS_and_MicroRSX_System_Management_Guide_Sep87.pdf) manual. 
+
+Expanding the secondary pool temporarily can be done in a few different ways, but doing so permanently requires a sysgen and VMR. First, temporarily; `LOAD /EXP=SEC /SIZE=n` can be used to increase the size of a given pool (in this example, the secondary pool as specified by `/EXP=SEC`) by `n` words:
 
 ```
 >LOAD /EXP=SEC /SIZE=100
