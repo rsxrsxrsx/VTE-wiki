@@ -269,7 +269,7 @@ Accept defaults, except the following:
 
 Once it completes, you'll be asked if you want to configure TCPIP. For the sake of simplicity we'll just do it now. The configuration is very simple, with some minor caveats. For convenience I have included my full IPCONFIG session below, but I will outline these separately:
 
-* I have occasionally had issues with getting the proper NTP/DNS server addresses from DHCP, though this may be an issue with my network. I choose to set them manually even when I do not have DHCP configured just to be sure.
+* I have occasionally had issues with getting the proper NTP/DNS server addresses from DHCP, though this may be an issue with my network. I choose to set them manually even when I have DHCP configured just to be sure.
 * Leave the configuration for IF1: untouched, this is your loopback device.
 
 ```
