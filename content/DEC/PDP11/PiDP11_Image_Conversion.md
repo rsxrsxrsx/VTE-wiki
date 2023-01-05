@@ -1,5 +1,5 @@
 # Converting Pi11/70 images for use on real Qbus systems
-The disk images provided with Oscar Vermuelen's beautiful [PiDP-11/70 kit](https://obsolescence.wixsite.com/obsolescence/pidp-11) (I have one- you should, too!) are extremely useful, packed full of great software and lovingly prepared by fellow PDP enthusiasts. They are also often built for UNIBUS PDP11s, whereas my PDP11 is Qbus. Below is how I have gone about converting these various images for use on a Qbus PDP11. With thanks to [Mark Matlock](http://rsx11m.com/) for his assistance (and patience :>). 
+The disk images provided with Oscar Vermuelen's beautiful [PiDP-11/70 kit](https://obsolescence.wixsite.com/obsolescence/pidp-11) (I have one- you should, too!) are extremely useful, packed full of great software and lovingly prepared by fellow PDP enthusiasts. They are also built for the UNIBUS PDP11/70, whereas my PDP11 is Qbus. Below is how I have gone about converting these various images for use on a Qbus PDP11. With thanks to [Mark Matlock](http://rsx11m.com/) for his assistance (and patience :>). 
 
 ## RSX11M+
 RSX11M+ is my personal favorite PDP11 operating system. There is just an inexplicable draw in the way that it behaves, so of course it was my first target. Rebuilding RSX11 requires at minimum a brand new SYSGEN, and since we are also running DECnet and Johnny Bilquist's BQTCP, we will also need fresh NETGEN and IPGENs. Let's tackle the SYSGEN first. Below is my SIMH configuration file:
@@ -113,7 +113,7 @@ From your SIMH PDP11:
 
 SYSGEN in your real devices here. RSX11 under SIMH will boot fine regardless of discrepancies between the devices in SYSGEN and those enabled, at least in my experience. YMMV. If something is truly busted you'll know before you even start looking at the real system.
 
-Once SYSGEN completes, boot as normal. To be safe, I like to make the following changes in `LB:[1,2]STARTUP.CMD`: 
+Once SYSGEN completes, boot as normal. To be safe, I like to make the following changes in `LB:[1,2]STARTUP.CMD` before rebooting: 
 
 ```
 [...]
@@ -238,6 +238,7 @@ If your SIMH-11 is already running you can break with Ctrl-E and attach the disk
 ```
 sim> set rl0 rl02
 sim> att rl0 bqtcp.dsk
+sim> go
 ```
 
 Otherwise, just add the same lines in your SIMH configuration file and boot. Do not writelock the disk, it is used as scratch space during IPGEN. Now, mount the distribution:
@@ -268,8 +269,8 @@ Accept defaults, except the following:
 
 Once it completes, you'll be asked if you want to configure TCPIP. For the sake of simplicity we'll just do it now. The configuration is very simple, with some minor caveats. For convenience I have included my full IPCONFIG session below, but I will outline these separately:
 
-* I have occasionally had issues with getting the proper NTP/DNS server addresses from DHCP, though this may be an issue with my network. I choose to set them manually.
-* The default CSR/vector addresses for QNA-0 are fine as is. Similarly, leave the configuration for IF1: untouched, this is your loopback device.
+* I have occasionally had issues with getting the proper NTP/DNS server addresses from DHCP, though this may be an issue with my network. I choose to set them manually even when I do not have DHCP configured just to be sure.
+* Leave the configuration for IF1: untouched, this is your loopback device.
 
 ```
 >;
