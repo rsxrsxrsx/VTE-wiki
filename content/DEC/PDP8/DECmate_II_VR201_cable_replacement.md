@@ -1,5 +1,5 @@
 # DECmate II VR201 cable (BCC02) replacement
-I have a DECmate II sans VR201, an LK201, and an [OSSC](https://videogameperfection.com/products/open-source-scan-converter/) for retrogaming. This should work to allow the use of a standard HDMI monitor with an LK201 (or Paul Koning's [LK201 emulator](https://github.com/pkoning2/lk201emu) on any upscaler/converter with VGA in.
+I have a DECmate II sans VR201, an LK201, and an [OSSC](https://videogameperfection.com/products/open-source-scan-converter/) for retrogaming. This should work to allow the use of a standard HDMI monitor with an LK201 (or Paul Koning's [LK201 emulator](https://github.com/pkoning2/lk201emu)) on any upscaler/converter with VGA in.
 
 References:
 * [NetBSD: LK201 Interface](https://www.netbsd.org/docs/Hardware/Machines/DEC/lk201.html#pinout)
@@ -53,4 +53,4 @@ RJ11 pin 3 -> DB15 pin 7 (+12v)
 RJ11 pin 4 -> DB15 pin 14 (kbd tx)
 ```
 
-Take care not to swap pins 2 and 3 on the RJ11, or your LK201 will eat +12v and fall over dead. Verify your pinout with a multimeter before plugging the cable into your LK201. VGA goes to the OSSC, HDMI (or whatever) to your machine, and you're good to go. No more VR201 cataracting!
+Take care not to swap pins 2 and 3 on the RJ11, or your LK201 will eat +12v and fall over dead. Swapping KBD TX and RX is not as big a problem, but your LK201 will not be recognized despite the LEDs blinking on. Verify your pinout with a multimeter before plugging the cable into your LK201. VGA goes to the OSSC, HDMI (or whatever) to your machine, and you're good to go. No more VR201 cataracting!
